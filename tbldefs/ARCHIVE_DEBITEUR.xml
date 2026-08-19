@@ -1,0 +1,677 @@
+﻿<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+  <xsd:element name="dataroot">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ARCHIVE_DEBITEUR" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="generated" type="xsd:dateTime"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ARCHIVE_DEBITEUR">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <od:index index-name="CleDéb_Code" index-key="Déb_Code " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Code_client" index-key="Déb_Code_Client " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Code_Enc" index-key="Déb_Code_Enc " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Date_Cré" index-key="Déb_Date_Cré " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Date_Représentation" index-key="Déb_Date_Représentation " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Lot_EID_Id" index-key="Déb_Lot_EID_Id " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Lot_IMPD_Id" index-key="Déb_Lot_IMPD_Id " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Mont_Prin_m1" index-key="Déb_Mont_Prin_m1 " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Mont_Prin_m2" index-key="Déb_Mont_Prin_m2 " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Mont_Prin_mo" index-key="Déb_Mont_Prin_mo " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Nom" index-key="Déb_Nom " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Réf1_Client" index-key="Déb_Réf1_Client " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Réf2_Client" index-key="Déb_Réf2_Client " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_Repré_Type" index-key="Déb_Repré_Type " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="CleDéb_RIB_Clé" index-key="Déb_RIB_Clé " primary="no" unique="no" clustered="no" order="asc"/>
+        <od:index index-name="PrimaryKey" index-key="Déb_Code " primary="yes" unique="yes" clustered="no" order="asc"/>
+        <od:tableProperty name="Orientation" type="2" value="0"/>
+        <od:tableProperty name="OrderByOn" type="1" value="0"/>
+        <od:tableProperty name="DefaultView" type="2" value="2"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Déb_Code_Client" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="1575"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Code Client"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="5"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Code" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="990"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Code"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="10"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Qualité" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="540"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Qualite"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="3"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Nom" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Nom"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="82"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Code_Enc" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Code Encaisseur"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="3"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Situation" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Code Situation"/>
+              <od:fieldProperty name="Required" type="1" value="1"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="0"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="2"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_niv_relance" minOccurs="0" od:jetType="integer" od:sqlSType="smallint" type="xsd:short">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="1545"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Niveau De Relance"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Npai" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Npai"/>
+              <od:fieldProperty name="Format" type="10" value="Yes/No"/>
+              <od:fieldProperty name="Required" type="1" value="1"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="106"/>
+              <od:fieldProperty name="DefaultValue" type="12" value="False"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Date_proch_rel" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="Format" type="10" value="Short Date"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Date De Prochaine Relance"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Date_der_rel" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Date De Derniere Relance"/>
+              <od:fieldProperty name="Format" type="10" value="Short Date"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Date_Cré" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="Format" type="10" value="Short Date"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Date De Creance"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Typ_Cré" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Type De Creance"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="150"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_MonnaieEnCours" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Monnaie En Cours"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="DefaultValue" type="12" value="1"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Frais_m1" minOccurs="0" od:jetType="currency" od:sqlSType="money" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Format" type="10" value="Standard"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Frais En Franc"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Frais_m2" minOccurs="0" od:jetType="currency" od:sqlSType="money" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Frais En Euro"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Mont_Prin_m1" minOccurs="0" od:jetType="currency" od:sqlSType="money" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Format" type="10" value="Standard"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Montant Principale En Franc"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Mont_Prin_m2" minOccurs="0" od:jetType="currency" od:sqlSType="money" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="DefaultValue" type="12" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Montant Principale En Euro"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Mont_Prin_mo" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Montant Principale Devise"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="DefaultValue" type="12" value="1"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Date_Représentation" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Date De Representation"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Repré_Type" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Representation Type Encaissement"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="5"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Mont_Origine_Cli" minOccurs="0" od:jetType="currency" od:sqlSType="money" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Montant Origine Client"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Mont_Récup_Cli" minOccurs="0" od:jetType="currency" od:sqlSType="money" type="xsd:double">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Montant Recuperer Client"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Réf1_Client" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Reference Client 1"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="30"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Réf2_Client" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Reference Client 2"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="30"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Nom_Banque" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Nom Banque"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="50"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Date_Chèque" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Date Cheque"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Num_Chèque" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Numero Cheque"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="30"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_RIB_Banque" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur RIB Code Banque"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="10"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_RIB_Guichet" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur RIB Code Guichet"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="10"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_RIB_Compte" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur RIB Compte"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="11"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_RIB_Clé" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debituer RIB Cle"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="2"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_RIB_Dom" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur RIB Domiciliation"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="50"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Observation" minOccurs="0" od:jetType="memo" od:sqlSType="ntext">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Observation"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="536870910"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Phoning" minOccurs="0" od:jetType="memo" od:sqlSType="ntext">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Phoning"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="AllowZeroLength" type="1" value="0"/>
+              <od:fieldProperty name="IMEMode" type="2" value="0"/>
+              <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+              <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:maxLength value="536870910"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="Déb_Clé_Impayé" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Cle Impaye Edigref"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Lot_IMPD_Id" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Lot Importer Detail Identifiant Edigref"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="Déb_Lot_EID_Id" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+          <xsd:annotation>
+            <xsd:appinfo>
+              <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+              <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+              <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+              <od:fieldProperty name="Description" type="10" value="Debiteur Lot Exportation Irrecouvrable Detail Identifiant Edigref"/>
+              <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+              <od:fieldProperty name="Required" type="1" value="0"/>
+              <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+            </xsd:appinfo>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

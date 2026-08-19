@@ -1,0 +1,144 @@
+﻿-------------------------------------
+Beginning Export of Source Files
+ARCHDEB.accdb
+VCS Version 4.1.2
+Full Path: D:\MES_SOURCES\ACCESS\SOURCES\DELTAINFORMATIQUE\ACCESS_2007-2016\GREF\ARCHDEB.accdb
+Export Folder: D:\MES_SOURCES\GITHUB\ARCHDEB.accdb\
+Performing Full Export
+19/08/2026 13:47:22
+-------------------------------------
+Scanning source files...
+No db connections found in this database.
+No vbe forms found in this database.
+No saved specs found in this database.
+No modules found in this database.
+No commandbars found in this database.
+No shared images found in this database.
+No imex specs found in this database.
+No queries found in this database.
+No forms found in this database.
+No macros found in this database.
+No reports found in this database.
+No table data found in this database.
+No table data macros found in this database.
+No hidden attributes found in this database.
+-------------------------------------
+Exporting project...          
+  ARCHDEB.accdb
+[1]
+-------------------------------------
+Exporting vb project...       
+  Access9
+[1]
+-------------------------------------
+Exporting vbe references...   
+  ADODB
+[4]
+-------------------------------------
+Exporting proj properties...  
+  Current Project Properties (Access)
+[2]
+-------------------------------------
+Exporting themes...           
+  Thème Office
+[1]
+-------------------------------------
+Exporting db properties...    
+  Database Properties (DAO)
+[36]
+-------------------------------------
+Exporting tables...           
+  ARCHIVE_ADRESSE_DEBITEUR
+    Sanitized in 0,001 seconds.
+  ARCHIVE_ADRESSE_DEBITEUR (SQL)
+  ARCHIVE_DEBITEUR
+    Sanitized in 0,002 seconds.
+  ARCHIVE_DEBITEUR (SQL)
+  ARCHIVE_ENCAISSEMENT
+    Sanitized in 0,001 seconds.
+  ARCHIVE_ENCAISSEMENT (SQL)
+[3]
+-------------------------------------
+Exporting relations...        
+  {A2D2E2C6-A021-4FA0-97D7-BB039C898B62}
+  DEBITEURADRESSE_DEBITEUR
+[2]
+-------------------------------------
+Exporting doc properties...   
+  Database Documents
+[1]
+-------------------------------------
+Exporting nav pane groups...  
+  Groups
+[1]
+-------------------------------------
+Done. (0,45 seconds)
+
+--------------------------------------------------
+                PERFORMANCE REPORTS
+--------------------------------------------------
+Category                      Count     Seconds
+--------------------------------------------------
+Tables                        3         0,07
+DB Properties                 36        0,06
+Project                       1         0,03
+Doc Properties                1         0,03
+Nav Pane Groups               1         0,03
+Relations                     2         0,03
+VBE References                4         0,02
+Themes                        1         0,02
+Proj Properties               2         0,02
+VB Project                    1         0,02
+DB Connections                0         0,01
+Hidden Attributes             0         0,00
+Shared Images                 0         0,00
+Table Data Macros             0         0,00
+IMEX Specs                    0         0,00
+VBE Forms                     0         0,00
+Table Data                    0         0,00
+Queries                       0         0,00
+CommandBars                   0         0,00
+Saved Specs                   0         0,00
+Modules                       0         0,00
+Forms                         0         0,00
+Reports                       0         0,00
+Macros                        0         0,00
+--------------------------------------------------
+TOTALS:                       52        0,33
+--------------------------------------------------
+
+--------------------------------------------------
+Operations                    Count     Seconds
+--------------------------------------------------
+Increment Progress            35        0,13
+Convert to JSON               430       0,07
+Scan DB Objects               1         0,05
+App.ExportXML()               3         0,02
+Console Updates               2         0,02
+Save Table SQL                3         0,01
+Get File Property Hash        26        0,01
+Write File                    15        0,00
+Clear Orphaned Files          12        0,00
+Quick Count Files             1         0,00
+modFileAccess.VerifyPath      19        0,00
+Compute SHA256                48        0,00
+Sanitize XML                  3         0,00
+Clear Files by Ext            6         0,00
+Quick Count Objects           1         0,00
+Parse JSON                    1         0,00
+Format XML                    2         0,00
+Check for linked table        3         0,00
+Get Modified Date             19        0,00
+Format XML (alt)              1         0,00
+Delete File                   5         0,00
+Close Open Objects            1         0,00
+Read File Bytes               4         0,00
+Read File                     4         0,00
+Parse JSON ISO Date           15        0,00
+Export Theme                  1         0,00
+modFileAccess.GetUncPath      2         0,00
+--------------------------------------------------
+Other Operations                        0,11
+--------------------------------------------------
+
+

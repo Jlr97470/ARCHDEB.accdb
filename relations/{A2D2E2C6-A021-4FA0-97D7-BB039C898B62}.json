@@ -1,0 +1,18 @@
+﻿{
+  "Info": {
+    "Class": "clsDbRelation",
+    "Description": "Database relationship"
+  },
+  "Items": {
+    "Name": "{A2D2E2C6-A021-4FA0-97D7-BB039C898B62}",
+    "Attributes": 4096,
+    "Table": "ARCHIVE_DEBITEUR",
+    "ForeignTable": "ARCHIVE_ENCAISSEMENT",
+    "Fields": [
+      {
+        "Name": "Déb_Code",
+        "ForeignName": "Enc_Code_Débiteur"
+      }
+    ]
+  }
+}

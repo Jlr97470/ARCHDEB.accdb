@@ -1,0 +1,18 @@
+﻿{
+  "Info": {
+    "Class": "clsDbRelation",
+    "Description": "Database relationship"
+  },
+  "Items": {
+    "Name": "DEBITEURADRESSE_DEBITEUR",
+    "Attributes": 256,
+    "Table": "ARCHIVE_DEBITEUR",
+    "ForeignTable": "ARCHIVE_ADRESSE_DEBITEUR",
+    "Fields": [
+      {
+        "Name": "Déb_Code",
+        "ForeignName": "AD_Code_Débiteur"
+      }
+    ]
+  }
+}
