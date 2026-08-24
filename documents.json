@@ -6,7 +6,16 @@
   "Items": {
     "Databases": {
       "SummaryInfo": {
-        "Title": "Access9"
+        "Title": {
+          "Type": 10,
+          "Value": "Access9"
+        }
+      },
+      "UserDefined": {
+        "ReplicateProject": {
+          "Type": 1,
+          "Value": true
+        }
       }
     }
   }
